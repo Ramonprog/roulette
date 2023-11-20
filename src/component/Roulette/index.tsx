@@ -1,8 +1,9 @@
 
-import { Button } from 'antd';
 import { useState } from 'react'
 import { Wheel } from 'react-custom-roulette'
 import styles from './styles.module.css'
+import { Button } from '@mui/material';
+import CachedIcon from '@mui/icons-material/Cached';
 
 const RouletteComponent = () => {
     const [mustSpin, setMustSpin] = useState(false);
@@ -39,7 +40,9 @@ const RouletteComponent = () => {
                 }}
 
             />
-            <Button className={styles.spin} type="primary" onClick={handleSpinClick}>SPIN</Button>
+            <div className={styles.spin}>
+                <Button sx={{ borderRadius: '50%', height: '67px' }} variant='contained' onClick={handleSpinClick}><CachedIcon /></Button>
+            </div>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import styles from './styles.module.css';
-import BwLogo from '/public/bw.png'
+import BwLogo from '../../assets/bw.png'
 
 const NavBar = () => {
     return (
