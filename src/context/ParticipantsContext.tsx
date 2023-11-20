@@ -9,7 +9,7 @@ type ProviderProps = {
 const ParticipantsProvider = ({ children }: ProviderProps) => {
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [participants, setParticipants] = useState([]);
+    const [participants, setParticipants] = useState<string[]>([]);
 
     return (
         <ParticipantsContext.Provider value={{ participants, setParticipants }}>
