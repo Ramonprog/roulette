@@ -3,6 +3,7 @@ import './App.css'
 import NavBar from './component/NavBar';
 import RouletteComponent from './component/Roulette';
 import styles from './app.module.css'
+import FromComponent from './component/Form';
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
     <div>
       <NavBar />
       <div className={styles.container}>
-        formulário
+        <FromComponent />
         <RouletteComponent />
 
       </div>
