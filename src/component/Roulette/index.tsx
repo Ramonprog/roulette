@@ -1,6 +1,8 @@
 
+import { Button } from 'antd';
 import { useState } from 'react'
 import { Wheel } from 'react-custom-roulette'
+import styles from './styles.module.css'
 
 const RouletteComponent = () => {
     const [mustSpin, setMustSpin] = useState(false);
@@ -24,7 +26,7 @@ const RouletteComponent = () => {
 
     }
     return (
-        <div>
+        <div className={styles.roulette}>
             <Wheel
                 mustStartSpinning={mustSpin}
                 prizeNumber={prizeNumber}
@@ -37,7 +39,7 @@ const RouletteComponent = () => {
                 }}
 
             />
-            <button onClick={handleSpinClick}>SPIN</button>
+            <Button className={styles.spin} type="primary" onClick={handleSpinClick}>SPIN</Button>
         </div>
     )
 }
